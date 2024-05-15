@@ -1,9 +1,4 @@
-public class Star {
-  private float mass;
-  private PVector position;
-  private PVector velocity;
-  private PVector acceleration;
-  private color c;
+public class Star extends Astro {
   public Star(float m, float x, float y, float xV, float yV, int r, int g, int b) {
     mass = m;
     position = new PVector(x, y);
