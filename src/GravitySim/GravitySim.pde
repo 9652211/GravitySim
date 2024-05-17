@@ -51,7 +51,7 @@ void draw() {
   }
   click = pressed&&!lastPressed&&!isStart;
   release = !pressed&&lastPressed&&!isStart;
-  /*for(Astro astro : astros) {
+  for(Astro astro : astros) {
     for(Astro alt : astros) {
       if(alt!=astro) {
         PVector r = astro.position.sub(alt.position);
@@ -69,9 +69,9 @@ void draw() {
     }
   }
   
-  if(blackholes.size()>1) {
-    PVector r = blackholes.get(0).position.sub(blackholes.get(1).position);
-  }*/
+  //if(blackholes.size()>1) {
+  //  PVector r = blackholes.get(0).position.sub(blackholes.get(1).position);
+  //}
   for(BlackHole blackhole : blackholes) {
     blackhole.drawBH();
     blackhole.position = PVector.add(blackhole.position, blackhole.velocity);
@@ -148,20 +148,10 @@ void draw() {
       clicked = true;
     }
   }
-  /*if(clickable) {
-    if(astros.size()>0) {
-      println("clickable" + " " + astros.size() + " " + astros.get(0).acceleration.mag());
-    }
-    println("clickable");
-  } else if(clicked) {
-    println("clicked");
-  } else if(dragging) {
-    println("dragging");
-  }*/
   textSize(30);
   fill(255);
-  text("Here's an image of Saturn until the project is developed further!", 450, 200);
-  text(o, 700, 600);
+  
+  //text(o, 700, 600);
   fill(0);
   circle(750, 300, 100);
   fill(255, 255, 50);
@@ -170,7 +160,7 @@ void draw() {
   circle(750, 500, 20);
   fill(150, 150, 150);
   circle(800, 500, 10);
-  image(saturn, 450, 550, 323, 156);
+  //image(saturn, 450, 550, 323, 156);
   if(start) {
     fill(0, 0, 50);
     rect(0, 0, 900, 900);
@@ -189,4 +179,5 @@ void startScreen() {
   text("SIMULATOR!", 450, 400);
   textSize(30);
   text("Click anywhere to begin!", 450, 600);
+  image(saturn, 450, 700, 323, 156);
 }
