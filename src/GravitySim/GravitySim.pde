@@ -67,11 +67,11 @@ void draw() {
       
       //println(astro.velocity.mag());
     }
-  }*/
+  }
   
   if(blackholes.size()>1) {
     PVector r = blackholes.get(0).position.sub(blackholes.get(1).position);
-  }
+  }*/
   for(BlackHole blackhole : blackholes) {
     blackhole.drawBH();
     blackhole.position = PVector.add(blackhole.position, blackhole.velocity);
